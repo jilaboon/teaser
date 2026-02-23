@@ -38,16 +38,16 @@ body::after {
 }
 
 .mask-img {
-  width: 420px;
+  width: 200px;
   height: auto;
-  filter: drop-shadow(0 0 30px rgba(255,106,213,0.6)) drop-shadow(0 0 60px rgba(110,231,255,0.4));
-  margin-bottom: 20px;
+  filter: drop-shadow(0 0 20px rgba(255,106,213,0.6)) drop-shadow(0 0 40px rgba(110,231,255,0.4));
+  margin-bottom: 24px;
   position: relative;
   z-index: 1;
 }
 
-.text {
-  font-size: 40px;
+.text-line {
+  font-size: 72px;
   font-weight: 900;
   color: #ff0080;
   text-shadow: 0 0 20px #ff0080, 0 0 40px #ff00ff, 0 0 80px rgba(255,0,128,0.5);
@@ -56,11 +56,26 @@ body::after {
   position: relative;
   z-index: 1;
   letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+.text-line-2 {
+  font-size: 58px;
+  font-weight: 800;
+  color: #00ffff;
+  text-shadow: 0 0 20px #00ffff, 0 0 40px #00ccff, 0 0 80px rgba(0,255,255,0.5);
+  direction: rtl;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.02em;
+  margin-top: 8px;
+  line-height: 1.2;
 }
 
 .emoji-row {
   font-size: 36px;
-  margin-top: 12px;
+  margin-top: 16px;
   position: relative;
   z-index: 1;
 }
@@ -130,7 +145,8 @@ body::after {
   <span class="sparkle s4">🎉</span>
 
   <img class="mask-img" src="mask.png" />
-  <div class="text">מסיבת פורים פסגת אונו! כנסו לראות מה מחכה לכם</div>
+  <div class="text-line">מסיבת פורים פסגת אונו</div>
+  <div class="text-line-2">כנסו לראות מה מחכה לכם</div>
   <div class="emoji-row">🎭 🎪 🥳 🍬 🎉</div>
 </body>
 </html>
