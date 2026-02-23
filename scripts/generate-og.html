@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 1200px;
+  height: 630px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 50%, #001a33 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+  position: relative;
+}
+
+/* Neon glow spots */
+body::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,0,255,0.15) 0%, transparent 70%);
+  top: -50px;
+  left: -50px;
+}
+body::after {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0,255,255,0.1) 0%, transparent 70%);
+  bottom: -100px;
+  right: -50px;
+}
+
+.mask-img {
+  width: 420px;
+  height: auto;
+  filter: drop-shadow(0 0 30px rgba(255,106,213,0.6)) drop-shadow(0 0 60px rgba(110,231,255,0.4));
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.text {
+  font-size: 52px;
+  font-weight: 900;
+  color: #ff0080;
+  text-shadow: 0 0 20px #ff0080, 0 0 40px #ff00ff, 0 0 80px rgba(255,0,128,0.5);
+  direction: rtl;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.02em;
+}
+
+.emoji-row {
+  font-size: 36px;
+  margin-top: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Decorative neon lines */
+.line-1 {
+  position: absolute;
+  width: 300px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ff00ff, transparent);
+  top: 40px;
+  left: 50px;
+  transform: rotate(-5deg);
+  box-shadow: 0 0 10px #ff00ff;
+}
+.line-2 {
+  position: absolute;
+  width: 250px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #00ffff, transparent);
+  bottom: 50px;
+  right: 60px;
+  transform: rotate(3deg);
+  box-shadow: 0 0 10px #00ffff;
+}
+.line-3 {
+  position: absolute;
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffff00, transparent);
+  top: 80px;
+  right: 100px;
+  transform: rotate(-8deg);
+  box-shadow: 0 0 8px #ffff00;
+}
+.line-4 {
+  position: absolute;
+  width: 180px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ff00, transparent);
+  bottom: 90px;
+  left: 80px;
+  transform: rotate(6deg);
+  box-shadow: 0 0 8px #00ff00;
+}
+
+/* Corner sparkles */
+.sparkle {
+  position: absolute;
+  font-size: 28px;
+  opacity: 0.7;
+}
+.s1 { top: 30px; right: 40px; }
+.s2 { bottom: 30px; left: 40px; }
+.s3 { top: 120px; left: 120px; }
+.s4 { bottom: 100px; right: 120px; }
+</style>
+</head>
+<body>
+  <div class="line-1"></div>
+  <div class="line-2"></div>
+  <div class="line-3"></div>
+  <div class="line-4"></div>
+  <span class="sparkle s1">✨</span>
+  <span class="sparkle s2">🎭</span>
+  <span class="sparkle s3">🪩</span>
+  <span class="sparkle s4">🎉</span>
+
+  <img class="mask-img" src="mask.png" />
+  <div class="text">..כנסו לראות מה מחכה לכם</div>
+  <div class="emoji-row">🎭 🎪 🥳 🍬 🎉</div>
+</body>
+</html>
