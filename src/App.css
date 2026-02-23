@@ -990,51 +990,22 @@ input:focus-visible {
   50% { text-shadow: 0 0 25px #ff6ad5, 0 0 50px #ff00ff, 0 0 80px #ff6ad5; transform: scale(1.05); }
 }
 
-/* Bubble hint badge */
+/* Bubble hint badge - inline next to DJ bullet */
 .bubble-hint-badge {
-  position: fixed;
-  right: 4rem;
-  top: 50%;
-  translate: 0 -50%;
-  z-index: 90;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.7rem 1rem;
-  background: rgba(0, 0, 0, 0.6);
-  border: 2px solid #ffff00;
-  border-radius: 14px;
-  transform: rotate(-5deg);
-  box-shadow: 0 0 15px rgba(255, 255, 0, 0.4), 0 0 30px rgba(255, 255, 0, 0.15);
-  animation: badge-wobble 4s ease-in-out infinite;
-  direction: rtl;
-  writing-mode: horizontal-tb;
-  pointer-events: none;
-}
-
-.bubble-hint-icon {
-  font-size: 1.4rem;
-  animation: hint-bounce 1.5s ease-in-out infinite;
-}
-
-.bubble-hint-text {
-  font-size: clamp(0.85rem, 2vw, 1.1rem);
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 0.15rem 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #ffff00;
+  border-radius: 8px;
+  font-size: 0.7rem;
   font-weight: 700;
   color: #ffff00;
-  text-shadow: 0 0 8px #ffff00, 0 1px 0 #000, 0 -1px 0 #000, 1px 0 0 #000, -1px 0 0 #000;
-}
-
-@keyframes badge-wobble {
-  0%, 100% { transform: rotate(-5deg); }
-  25% { transform: rotate(-3deg) translateY(-3px); }
-  50% { transform: rotate(-6deg); }
-  75% { transform: rotate(-4deg) translateY(3px); }
-}
-
-@keyframes hint-bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
+  text-shadow: 0 0 6px #ffff00;
+  box-shadow: 0 0 8px rgba(255, 255, 0, 0.3);
+  transform: rotate(-3deg);
+  white-space: nowrap;
+  vertical-align: middle;
 }
 
 @media (max-width: 768px) {
@@ -1043,23 +1014,7 @@ input:focus-visible {
   }
 
   .bubble-hint-badge {
-    position: fixed;
-    right: auto;
-    left: 50%;
-    top: auto;
-    bottom: 5rem;
-    translate: -50% 0;
-    padding: 0.4rem 0.8rem;
-    transform: rotate(-2deg);
-    flex-direction: row;
-  }
-
-  .bubble-hint-icon {
-    font-size: 1rem;
-  }
-
-  .bubble-hint-text {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
   }
 }
 

@@ -47,11 +47,6 @@ function App() {
       <div className="scanlines" />
       <div className="vignette" />
 
-      <div className="bubble-hint-badge">
-        <span className="bubble-hint-icon">👆</span>
-        <span className="bubble-hint-text">פוצצו בועות וצברו נקודות!</span>
-      </div>
-
       {showBonusScore && <div className="bonus-popup">+10! 🔺</div>}
 
       <div className="content-wrapper">
@@ -69,7 +64,7 @@ function App() {
             <span className="teaser-sub-text">{"\u202Bשתרצו להיות בו\u202C"}</span>
           </p>
           <ul className="party-details">
-            <li>DJ מיקי לוי</li>
+            <li>DJ מיקי לוי <span className="bubble-hint-badge">👆 פוצצו בועות!</span></li>
             <li>אוכל ושתיה</li>
             <li>מסיבת תחפושות מטורפת</li>
             <li>פרסים משוגעים</li>
