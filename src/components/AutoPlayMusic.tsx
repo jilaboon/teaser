@@ -23,19 +23,19 @@ export const AutoPlayMusic = ({ purimMode }: AutoPlayMusicProps) => {
 
   const startMusic = useCallback(async () => {
     const audio = audioRef.current;
-    if (!audio || hasAttemptedPlay.current) return;
+    if (hasAttemptedPlay.current) return;
+    hasAttemptedPlay.current = true;
+    setShowHint(false);
 
-    audio.load();
+    if (!audio) return;
 
     try {
+      audio.load();
       audio.currentTime = 0;
       await audio.play();
-      hasAttemptedPlay.current = true;
-      setShowHint(false);
-      setPlaybackError(null);
     } catch (err) {
       console.error('Audio playback failed:', err);
-      setPlaybackError('Tap again to start music.');
+      // Still dismiss overlay — user interaction was registered
     }
   }, []);
 
