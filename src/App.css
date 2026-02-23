@@ -1043,9 +1043,23 @@ input:focus-visible {
   }
 
   .bubble-hint-badge {
-    right: 1.5rem;
-    padding: 0.5rem 0.7rem;
-    font-size: 0.85rem;
+    position: fixed;
+    right: auto;
+    left: 50%;
+    top: auto;
+    bottom: 5rem;
+    translate: -50% 0;
+    padding: 0.4rem 0.8rem;
+    transform: rotate(-2deg);
+    flex-direction: row;
+  }
+
+  .bubble-hint-icon {
+    font-size: 1rem;
+  }
+
+  .bubble-hint-text {
+    font-size: 0.75rem;
   }
 }
 

@@ -18,15 +18,15 @@ export const AutoPlayMusic = ({ purimMode }: AutoPlayMusicProps) => {
 
   const dismiss = () => {
     setShowHint(false);
-
-    const audio = audioRef.current;
-    if (!audio) return;
-
-    audio.play().catch(() => {
-      // Retry once after a short delay
-      setTimeout(() => {
-        audio.play().catch(() => undefined);
-      }, 100);
+    // Small delay to ensure the audio element persists in the new render
+    requestAnimationFrame(() => {
+      const audio = audioRef.current;
+      if (!audio) return;
+      audio.play().catch(() => {
+        setTimeout(() => {
+          audio.play().catch(() => undefined);
+        }, 200);
+      });
     });
   };
 
@@ -46,17 +46,6 @@ export const AutoPlayMusic = ({ purimMode }: AutoPlayMusicProps) => {
     return () => document.removeEventListener('visibilitychange', handleVisibility);
   }, [showHint]);
 
-  if (!showHint) {
-    return (
-      <audio
-        ref={audioRef}
-        src={audioSrc}
-        loop
-        preload="auto"
-      />
-    );
-  }
-
   return (
     <>
       <audio
@@ -65,22 +54,24 @@ export const AutoPlayMusic = ({ purimMode }: AutoPlayMusicProps) => {
         loop
         preload="auto"
       />
-      <div className="music-hint-overlay" onClick={dismiss}>
-        <div className="music-hint">
-          Tap anywhere to enter 🎭
-          <button
-            type="button"
-            className="music-hint-button"
-            onClick={(e) => {
-              e.stopPropagation();
-              dismiss();
-            }}
-          >
-            Enter the experience
-          </button>
-          <div className="music-hint-message">Pop the bubbles while you wait...</div>
+      {showHint && (
+        <div className="music-hint-overlay" onClick={dismiss}>
+          <div className="music-hint">
+            Tap anywhere to enter 🎭
+            <button
+              type="button"
+              className="music-hint-button"
+              onClick={(e) => {
+                e.stopPropagation();
+                dismiss();
+              }}
+            >
+              Enter the experience
+            </button>
+            <div className="music-hint-message">Pop the bubbles while you wait...</div>
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 };
