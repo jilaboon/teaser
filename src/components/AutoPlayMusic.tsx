@@ -57,7 +57,7 @@ export const AutoPlayMusic = ({ purimMode }: AutoPlayMusicProps) => {
       {showHint && (
         <div className="music-hint-overlay" onClick={dismiss}>
           <div className="music-hint">
-            Tap anywhere to enter 🎭
+            לחצו בכל מקום להיכנס 🎭
             <button
               type="button"
               className="music-hint-button"
@@ -66,9 +66,9 @@ export const AutoPlayMusic = ({ purimMode }: AutoPlayMusicProps) => {
                 dismiss();
               }}
             >
-              Enter the experience
+              כניסה למסיבה
             </button>
-            <div className="music-hint-message">Pop the bubbles while you wait...</div>
+            <div className="music-hint-message">פוצצו בועות בזמן שאתם מחכים...</div>
           </div>
         </div>
       )}
