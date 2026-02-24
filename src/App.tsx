@@ -66,7 +66,7 @@ function App() {
           <ul className="party-details">
             <li>DJ מיקי לוי <span className="bubble-hint-badge">👆 פוצצו בועות!</span></li>
             <li>אוכל ושתיה</li>
-            <li>מסיבת תחפושות נושאת פרסים</li>
+            <li>תחרות תחפושות נושאת פרסים</li>
             <li className="highlight-bullet">💜 ואתם 💜</li>
           </ul>
         </header>
