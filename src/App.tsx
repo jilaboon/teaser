@@ -46,6 +46,7 @@ function App() {
 
       <div className="scanlines" />
       <div className="vignette" />
+      <div className="bubble-hint-badge">👆 פוצצו בועות!</div>
 
       {showBonusScore && <div className="bonus-popup">+10! 🔺</div>}
 
@@ -65,7 +66,6 @@ function App() {
           </p>
           <ul className="party-details">
             <li>DJ מיקי לוי</li>
-            <li className="badge-line"><span className="bubble-hint-badge">👆 פוצצו בועות!</span></li>
             <li>אוכל ושתיה</li>
             <li>תחרות תחפושות נושאת פרסים</li>
             <li className="highlight-bullet">💜 ואתם 💜</li>
