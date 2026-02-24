@@ -985,6 +985,15 @@ input:focus-visible {
   content: "";
 }
 
+.party-details li.badge-line {
+  font-size: 0;
+  line-height: 1;
+}
+
+.party-details li.badge-line::before {
+  content: "";
+}
+
 @keyframes heart-glow {
   0%, 100% { text-shadow: 0 0 15px #ff6ad5, 0 0 30px #ff00ff, 0 0 60px #ff6ad5; transform: scale(1); }
   50% { text-shadow: 0 0 25px #ff6ad5, 0 0 50px #ff00ff, 0 0 80px #ff6ad5; transform: scale(1.05); }

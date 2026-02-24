@@ -64,7 +64,8 @@ function App() {
             <span className="teaser-sub-text">{"\u202Bשתרצו להיות בו\u202C"}</span>
           </p>
           <ul className="party-details">
-            <li>DJ מיקי לוי <span className="bubble-hint-badge">👆 פוצצו בועות!</span></li>
+            <li>DJ מיקי לוי</li>
+            <li className="badge-line"><span className="bubble-hint-badge">👆 פוצצו בועות!</span></li>
             <li>אוכל ושתיה</li>
             <li>תחרות תחפושות נושאת פרסים</li>
             <li className="highlight-bullet">💜 ואתם 💜</li>
