@@ -15,7 +15,7 @@ function App() {
 
   const headerCountdown = isPartyTime
     ? 'IT\'S HERE'
-    : `${days}D ${String(hours).padStart(2, '0')}H ${String(minutes).padStart(2, '0')}M ${String(seconds).padStart(2, '0')}S`;
+    : `${days}d ${String(hours).padStart(2, '0')}h ${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(2, '0')}s`;
 
   const [score, setScore] = useState(0);
   const [purimMode, setPurimMode] = useState(false);
