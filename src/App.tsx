@@ -46,7 +46,7 @@ function App() {
 
       <div className="scanlines" />
       <div className="vignette" />
-      <div className="bubble-hint-badge">👆 פוצצו בועות!</div>
+      <div className="bubble-hint-badge">👆<br/>פוצצו<br/>בועות!</div>
 
       {showBonusScore && <div className="bonus-popup">+10! 🔺</div>}
 
