@@ -57,7 +57,7 @@ function App() {
             <span className="date-big">{headerCountdown}</span>
           </h1>
           <p className="subtitle"><span className="day-name">THURSDAY</span> March 5, 2026 — 21:30</p>
-          <p className="location">שמירה אימבר גדיש 9, קרית אונו</p>
+          <p className="location">שמירה אימבר גדיש 9, קרית אונו (מול אושר-עד)</p>
           <p className="teaser-subtitle">
             <span className="teaser-hero-text">{"\u202Bאין מקום אחר!\u202C"}</span>
             <br />
